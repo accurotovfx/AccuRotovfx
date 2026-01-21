@@ -1,158 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AccuRoto VFX | Professional Rotoscoping Studio</title>
-  <meta name="description" content="AccuRoto VFX – Professional Rotoscoping services for Films and OTT platforms." />
+<title>AccuRoto VFX | Cinematic Rotoscoping Studio</title>
+<meta name="description" content="AccuRoto VFX – Cinematic-quality Rotoscoping for Films and OTT Platforms." />
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0b0b0b;
-      color: #ffffff;
-      line-height: 1.6;
-    }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 
-    /* HEADER */
-    header {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      padding: 90px 20px;
-      text-align: center;
-    }
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: radial-gradient(circle at top, #0f2027, #000 70%);
+  color: #ffffff;
+  line-height: 1.7;
+}
 
-    /* LOGO */
-    .logo {
-      font-size: 3.2rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-      color: #00ffd5;
-      animation: glow 2.5s infinite alternate;
-    }
+/* HERO */
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9)),
+    url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4") center/cover no-repeat;
+}
 
-    .logo span {
-      color: #ffffff;
-    }
+.hero-box {
+  max-width: 900px;
+  padding: 20px;
+}
 
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px rgba(0,255,213,0.4);
-      }
-      to {
-        text-shadow: 0 0 30px rgba(0,255,213,0.9);
-      }
-    }
+.logo {
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #00ffd5;
+  animation: glow 2.5s infinite alternate;
+}
 
-    header p {
-      font-size: 1.2rem;
-      color: #dddddd;
-      margin-top: 10px;
-    }
+.logo span {
+  color: #ffffff;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+@keyframes glow {
+  from { text-shadow: 0 0 15px rgba(0,255,213,0.4); }
+  to { text-shadow: 0 0 35px rgba(0,255,213,1); }
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2.2rem;
-    }
+.hero-box h2 {
+  font-weight: 300;
+  margin-top: 20px;
+  color: #dddddd;
+  font-size: 1.4rem;
+}
 
-    /* SERVICES / PROJECT GRID */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+.hero-box p {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  color: #bbbbbb;
+}
 
-    .card {
-      background: #161616;
-      padding: 20px;
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+/* SECTION */
+section {
+  padding: 90px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 25px rgba(0,255,213,0.4);
-    }
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
 
-    .card img {
-      width: 100%;
-      border-radius: 12px;
-    }
+/* ABOUT */
+.about {
+  text-align: center;
+  max-width: 950px;
+  margin: auto;
+  font-size: 1.05rem;
+  color: #dddddd;
+}
 
-    .card h3 {
-      color: #00ffd5;
-      margin-bottom: 10px;
-    }
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
 
-    .card p {
-      color: #cccccc;
-      font-size: 0.95rem;
-    }
+/* CARDS */
+.card {
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.7);
+  transition: all 0.4s ease;
+}
 
-    /* ABOUT */
-    .about {
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-      color: #dddddd;
-    }
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(0,255,213,0.5);
+}
 
-    /* CONTACT */
-    .contact {
-      text-align: center;
-    }
+.card h3 {
+  color: #00ffd5;
+  margin-bottom: 10px;
+}
 
-    .contact a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 26px;
-      background: #00ffd5;
-      color: #000;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-    }
+.card p {
+  color: #cccccc;
+  font-size: 0.95rem;
+}
 
-    footer {
-      background: #000;
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 0.9rem;
-    }
+.card img {
+  width: 100%;
+  border-radius: 14px;
+}
 
-    iframe {
-      border-radius: 16px;
-    }
+/* SHOWREEL */
+iframe {
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
 
-    @media (max-width: 768px) {
-      .logo {
-        font-size: 2.4rem;
-      }
-      iframe {
-        width: 100%;
-        height: 240px;
-      }
-    }
-  </style>
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  display: inline-block;
+  margin: 10px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #00ffd5, #00c9ff);
+  color: #000;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 25px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .logo { font-size: 2.6rem; }
+  iframe { width: 100%; height: 240px; }
+}
+</style>
 </head>
 
 <body>
 
 <!-- HERO -->
 <header>
-  <div class="logo">Accu<span>Roto</span> VFX</div>
-  <p>Precision Rotoscoping • Trusted VFX Partner</p>
+  <div class="hero-box">
+    <div class="logo">Accu<span>Roto</span> VFX</div>
+    <h2>Cinematic Precision in Rotoscoping</h2>
+    <p>
+      Trusted roto partner for films, OTT platforms, and global VFX studios.
+    </p>
+  </div>
 </header>
 
 <!-- ABOUT -->
@@ -160,26 +181,14 @@
   <h2>About AccuRoto VFX</h2>
   <div class="about">
     <p>
-      AccuRoto VFX is a Bangalore, India–based VFX studio established in 2025,
-      specializing in high-quality rotoscoping services. Currently, we operate
-      with a skilled team of around 10 professional roto artists, delivering
-      clean, frame-accurate, and production-ready mattes for films, OTT platforms,
-      and commercials.
+      AccuRoto VFX is a Bangalore-based VFX studio founded in 2025, focused on delivering
+      cinematic-quality rotoscoping for feature films and OTT platforms. With a dedicated
+      team of skilled artists, we ensure precision, consistency, and on-time delivery.
     </p>
-
     <p>
-      We believe that consistent quality, on-time delivery, and continuous
-      learning are the foundations of long-term success. While our current
-      focus is purely on rotoscoping, we are actively preparing to expand into
-      additional departments such as matchmove, paint, chroma removal, clean-up,
-      and wire removal as new projects and opportunities grow.
-    </p>
-
-    <p>
-      AccuRoto VFX has contributed to numerous national and international projects
-      as a trusted vendor partner for both small and large VFX studios worldwide.
-      We welcome new projects and are equipped to handle both small shot counts
-      and bulk roto workloads with equal dedication and precision.
+      While rotoscoping is our current core service, we are continuously evolving and
+      preparing to expand into matchmove, paint, clean-up, wire removal, and chroma
+      services as projects grow. We welcome both small and large-scale roto work.
     </p>
   </div>
 </section>
@@ -187,22 +196,22 @@
 <!-- SERVICES -->
 <section>
   <h2>Services</h2>
-  <div class="services">
+  <div class="grid">
     <div class="card">
-      <h3>Rotoscoping (Currently Active)</h3>
-      <p>Our core service — high-precision roto delivered with production accuracy and consistency.</p>
+      <h3>Rotoscoping (Active)</h3>
+      <p>High-end, frame-accurate roto for demanding cinematic pipelines.</p>
     </div>
     <div class="card">
-      <h3>Paint & Prep (Upcoming)</h3>
-      <p>Wire removal, rig removal, clean-ups, and plate preparation as projects expand.</p>
+      <h3>Paint & Prep</h3>
+      <p>Upcoming services including clean-ups, wire and rig removal.</p>
     </div>
     <div class="card">
-      <h3>Keying (Upcoming)</h3>
-      <p>Green and blue screen keying with clean, production-ready mattes.</p>
+      <h3>Keying</h3>
+      <p>Green & blue screen keying support as our pipeline expands.</p>
     </div>
     <div class="card">
-      <h3>Tracking (Upcoming)</h3>
-      <p>Object, planar, and camera tracking support for VFX shots.</p>
+      <h3>Tracking</h3>
+      <p>Object, planar, and camera tracking support in future phases.</p>
     </div>
   </div>
 </section>
@@ -210,44 +219,35 @@
 <!-- PROJECTS -->
 <section>
   <h2>Our Projects</h2>
-  <div class="services">
-    <div class="card"><img src="poster1.jpg"><p>Rotoscoping</p></div>
-    <div class="card"><img src="poster2.jpg"><p>Rotoscoping</p></div>
-    <div class="card"><img src="poster3.jpg"><p>Rotoscoping</p></div>
-    <div class="card"><img src="poster4.jpg"><p>Rotoscoping</p></div>
-    <div class="card"><img src="poster5.jpg"><p>Rotoscoping</p></div>
-    <div class="card"><img src="poster6.jpg"><p>Rotoscoping</p></div>
-    <div class="card"><img src="poster7.jpg"><p>Rotoscoping</p></div>
-    <div class="card"><img src="poster8.jpg"><p>Rotoscoping</p></div>
-    <div class="card"><img src="poster9.jpg"><p>Rotoscoping</p></div>
-    <div class="card"><img src="poster10.jpg"><p>Rotoscoping</p></div>
+  <div class="grid">
+    <div class="card"><img src="poster1.jpg"></div>
+    <div class="card"><img src="poster2.jpg"></div>
+    <div class="card"><img src="poster3.jpg"></div>
+    <div class="card"><img src="poster4.jpg"></div>
+    <div class="card"><img src="poster5.jpg"></div>
+    <div class="card"><img src="poster6.jpg"></div>
+    <div class="card"><img src="poster7.jpg"></div>
+    <div class="card"><img src="poster8.jpg"></div>
+    <div class="card"><img src="poster9.jpg"></div>
+    <div class="card"><img src="poster10.jpg"></div>
   </div>
-
-  <p style="text-align:center; color:#bbbbbb; margin-top:25px;">
-    *Posters shown for portfolio representation only.
-  </p>
 </section>
 
 <!-- SHOWREEL -->
 <section>
   <h2>Showreel</h2>
   <div style="text-align:center;">
-    <iframe
+    <iframe width="80%" height="420"
       src="https://www.youtube.com/embed/xiCkQ_rp0XE"
-      width="80%"
-      height="420"
-      title="AccuRoto VFX Showreel"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
+      allowfullscreen></iframe>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section>
-  <h2>Contact Us</h2>
+  <h2>Contact</h2>
   <div class="contact">
-    <p>We are open to new projects — small or bulk roto work.</p>
+    <p>Open for new cinematic roto projects.</p>
     <a href="mailto:accurotovfx@gmail.com">Email Us</a>
     <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
   </div>
@@ -256,17 +256,6 @@
 <footer>
   © 2026 AccuRoto VFX. All Rights Reserved.
 </footer>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/917845928170"
-   target="_blank"
-   style="position:fixed; bottom:20px; right:20px;
-          background:#25D366; color:white;
-          padding:15px 18px; border-radius:50%;
-          font-size:22px; text-decoration:none;
-          box-shadow:0 0 20px rgba(0,0,0,0.6);">
-  💬
-</a>
 
 </body>
 </html>
