@@ -22,6 +22,29 @@
       text-align: center;
     }
 
+    /* 🔥 Animated Logo */
+    .logo {
+      width: 160px;
+      margin-bottom: 20px;
+      animation: logoPulse 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 8px rgba(0,255,213,0.6));
+    }
+
+    @keyframes logoPulse {
+      0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 6px rgba(0,255,213,0.4));
+      }
+      50% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 18px rgba(0,255,213,0.9));
+      }
+      100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 6px rgba(0,255,213,0.4));
+      }
+    }
+
     header h1 {
       font-size: 3rem;
       margin-bottom: 10px;
@@ -127,6 +150,7 @@
 
   <!-- HERO -->
   <header>
+    <img src="logo.png" alt="AccuRoto VFX Logo" class="logo">
     <h1>AccuRoto VFX</h1>
     <p>Precision Rotoscoping & VFX Services</p>
   </header>
@@ -196,11 +220,9 @@
         src="https://www.youtube.com/embed/xiCkQ_rp0XE"
         title="AccuRoto VFX Showreel"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         style="width:80%; height:420px; border-radius:16px;">
       </iframe>
-
       <p style="margin-top:15px; color:#cccccc;">
         AccuRoto VFX | Rotoscoping & Prep Demo Reel
       </p>
