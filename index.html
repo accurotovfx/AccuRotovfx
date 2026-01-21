@@ -16,44 +16,39 @@
       line-height: 1.6;
     }
 
+    /* HEADER */
     header {
-      background: linear-gradient(135deg, #111, #1f1f1f);
-      padding: 80px 20px;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      padding: 90px 20px;
       text-align: center;
     }
 
-    /* Animated Logo */
+    /* LOGO */
     .logo {
-      width: 160px;
-      margin-bottom: 20px;
-      animation: logoPulse 3s ease-in-out infinite;
-      filter: drop-shadow(0 0 8px rgba(0,255,213,0.6));
+      font-size: 3.2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #00ffd5;
+      animation: glow 2.5s infinite alternate;
     }
 
-    @keyframes logoPulse {
-      0% {
-        transform: scale(1);
-        filter: drop-shadow(0 0 6px rgba(0,255,213,0.4));
-      }
-      50% {
-        transform: scale(1.05);
-        filter: drop-shadow(0 0 18px rgba(0,255,213,0.9));
-      }
-      100% {
-        transform: scale(1);
-        filter: drop-shadow(0 0 6px rgba(0,255,213,0.4));
-      }
+    .logo span {
+      color: #ffffff;
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px rgba(0,255,213,0.4);
+      }
+      to {
+        text-shadow: 0 0 30px rgba(0,255,213,0.9);
+      }
     }
 
     header p {
       font-size: 1.2rem;
-      color: #cccccc;
+      color: #dddddd;
+      margin-top: 10px;
     }
 
     section {
@@ -68,6 +63,7 @@
       font-size: 2.2rem;
     }
 
+    /* SERVICES / PROJECT GRID */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -77,7 +73,7 @@
     .card {
       background: #161616;
       padding: 20px;
-      border-radius: 12px;
+      border-radius: 14px;
       text-align: center;
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -90,7 +86,7 @@
 
     .card img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     .card h3 {
@@ -99,26 +95,19 @@
     }
 
     .card p {
-      margin-top: 10px;
       color: #cccccc;
       font-size: 0.95rem;
     }
 
-    .note {
-      text-align: center;
-      color: #bbbbbb;
-      max-width: 850px;
-      margin: 0 auto 40px;
-      font-size: 0.95rem;
-    }
-
+    /* ABOUT */
     .about {
       text-align: center;
-      color: #dddddd;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
+      color: #dddddd;
     }
 
+    /* CONTACT */
     .contact {
       text-align: center;
     }
@@ -126,11 +115,11 @@
     .contact a {
       display: inline-block;
       margin: 10px;
-      padding: 12px 25px;
+      padding: 12px 26px;
       background: #00ffd5;
       color: #000;
       text-decoration: none;
-      border-radius: 25px;
+      border-radius: 30px;
       font-weight: bold;
     }
 
@@ -142,9 +131,13 @@
       font-size: 0.9rem;
     }
 
+    iframe {
+      border-radius: 16px;
+    }
+
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.3rem;
+      .logo {
+        font-size: 2.4rem;
       }
       iframe {
         width: 100%;
@@ -156,117 +149,124 @@
 
 <body>
 
-  <!-- HERO -->
-  <header>
-    <img src="logo.png" alt="AccuRoto VFX Logo" class="logo">
-    <h1>AccuRoto VFX</h1>
-    <p>Precision Rotoscoping Services</p>
-  </header>
+<!-- HERO -->
+<header>
+  <div class="logo">Accu<span>Roto</span> VFX</div>
+  <p>Precision Rotoscoping • Trusted VFX Partner</p>
+</header>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About AccuRoto VFX</h2>
-    <div class="about">
-      <p>
-        AccuRoto VFX is a dedicated VFX studio with a strong foundation in
-        rotoscoping. We focus on delivering clean, accurate, and production-ready
-        mattes while steadily expanding our capabilities as projects grow.
-      </p>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section>
-    <h2>Services</h2>
-
-    <p class="note">
-      <strong>Currently Active:</strong> Rotoscoping Services.<br>
-      Other VFX departments listed below will be offered as we expand with
-      future projects and collaborations.
+<!-- ABOUT -->
+<section>
+  <h2>About AccuRoto VFX</h2>
+  <div class="about">
+    <p>
+      AccuRoto VFX is a Bangalore, India–based VFX studio established in 2025,
+      specializing in high-quality rotoscoping services. Currently, we operate
+      with a skilled team of around 10 professional roto artists, delivering
+      clean, frame-accurate, and production-ready mattes for films, OTT platforms,
+      and commercials.
     </p>
 
-    <div class="services">
-      <div class="card">
-        <h3>Rotoscoping</h3>
-        <p>Frame-accurate, production-ready roto for films, OTT, and commercials.</p>
-      </div>
-      <div class="card">
-        <h3>Paint & Prep</h3>
-        <p>Wire removal, rig removal, clean-ups, and plate preparation.</p>
-      </div>
-      <div class="card">
-        <h3>Keying</h3>
-        <p>Green / Blue screen keying with clean, reliable mattes.</p>
-      </div>
-      <div class="card">
-        <h3>Tracking</h3>
-        <p>Object, planar, and camera tracking support for VFX shots.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section>
-    <h2>Our Projects</h2>
-    <div class="services">
-      <div class="card"><img src="poster1.jpg"><p>Rotoscoping</p></div>
-      <div class="card"><img src="poster2.jpg"><p>Rotoscoping</p></div>
-      <div class="card"><img src="poster3.jpg"><p>Rotoscoping</p></div>
-      <div class="card"><img src="poster4.jpg"><p>Rotoscoping</p></div>
-      <div class="card"><img src="poster5.jpg"><p>Rotoscoping</p></div>
-      <div class="card"><img src="poster6.jpg"><p>Rotoscoping</p></div>
-      <div class="card"><img src="poster7.jpg"><p>Rotoscoping</p></div>
-      <div class="card"><img src="poster8.jpg"><p>Rotoscoping</p></div>
-      <div class="card"><img src="poster9.jpg"><p>Rotoscoping</p></div>
-      <div class="card"><img src="poster10.jpg"><p>Rotoscoping</p></div>
-    </div>
-
-    <p class="note">
-      *Logos and posters shown for portfolio representation only.
+    <p>
+      We believe that consistent quality, on-time delivery, and continuous
+      learning are the foundations of long-term success. While our current
+      focus is purely on rotoscoping, we are actively preparing to expand into
+      additional departments such as matchmove, paint, chroma removal, clean-up,
+      and wire removal as new projects and opportunities grow.
     </p>
-  </section>
 
-  <!-- SHOWREEL -->
-  <section>
-    <h2>Showreel</h2>
-    <div style="text-align:center;">
-      <iframe
-        src="https://www.youtube.com/embed/xiCkQ_rp0XE"
-        title="AccuRoto VFX Showreel"
-        frameborder="0"
-        allowfullscreen
-        style="width:80%; height:420px; border-radius:16px;">
-      </iframe>
-      <p style="margin-top:15px; color:#cccccc;">
-        AccuRoto VFX | Rotoscoping Demo Reel
-      </p>
+    <p>
+      AccuRoto VFX has contributed to numerous national and international projects
+      as a trusted vendor partner for both small and large VFX studios worldwide.
+      We welcome new projects and are equipped to handle both small shot counts
+      and bulk roto workloads with equal dedication and precision.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <h2>Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Rotoscoping (Currently Active)</h3>
+      <p>Our core service — high-precision roto delivered with production accuracy and consistency.</p>
     </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section>
-    <h2>Contact Us</h2>
-    <div class="contact">
-      <p>Let’s collaborate on your next project.</p>
-      <a href="mailto:accurotovfx@gmail.com">Email Us</a>
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    <div class="card">
+      <h3>Paint & Prep (Upcoming)</h3>
+      <p>Wire removal, rig removal, clean-ups, and plate preparation as projects expand.</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>Keying (Upcoming)</h3>
+      <p>Green and blue screen keying with clean, production-ready mattes.</p>
+    </div>
+    <div class="card">
+      <h3>Tracking (Upcoming)</h3>
+      <p>Object, planar, and camera tracking support for VFX shots.</p>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    © 2026 AccuRoto VFX. All Rights Reserved.
-  </footer>
+<!-- PROJECTS -->
+<section>
+  <h2>Our Projects</h2>
+  <div class="services">
+    <div class="card"><img src="poster1.jpg"><p>Rotoscoping</p></div>
+    <div class="card"><img src="poster2.jpg"><p>Rotoscoping</p></div>
+    <div class="card"><img src="poster3.jpg"><p>Rotoscoping</p></div>
+    <div class="card"><img src="poster4.jpg"><p>Rotoscoping</p></div>
+    <div class="card"><img src="poster5.jpg"><p>Rotoscoping</p></div>
+    <div class="card"><img src="poster6.jpg"><p>Rotoscoping</p></div>
+    <div class="card"><img src="poster7.jpg"><p>Rotoscoping</p></div>
+    <div class="card"><img src="poster8.jpg"><p>Rotoscoping</p></div>
+    <div class="card"><img src="poster9.jpg"><p>Rotoscoping</p></div>
+    <div class="card"><img src="poster10.jpg"><p>Rotoscoping</p></div>
+  </div>
 
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/917845928170"
-     target="_blank"
-     style="position:fixed; bottom:20px; right:20px;
-            background:#25D366; color:white;
-            padding:15px 18px; border-radius:50%;
-            font-size:22px; text-decoration:none;
-            box-shadow:0 0 20px rgba(0,0,0,0.6);">
-    💬
-  </a>
+  <p style="text-align:center; color:#bbbbbb; margin-top:25px;">
+    *Posters shown for portfolio representation only.
+  </p>
+</section>
+
+<!-- SHOWREEL -->
+<section>
+  <h2>Showreel</h2>
+  <div style="text-align:center;">
+    <iframe
+      src="https://www.youtube.com/embed/xiCkQ_rp0XE"
+      width="80%"
+      height="420"
+      title="AccuRoto VFX Showreel"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <h2>Contact Us</h2>
+  <div class="contact">
+    <p>We are open to new projects — small or bulk roto work.</p>
+    <a href="mailto:accurotovfx@gmail.com">Email Us</a>
+    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 AccuRoto VFX. All Rights Reserved.
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/917845928170"
+   target="_blank"
+   style="position:fixed; bottom:20px; right:20px;
+          background:#25D366; color:white;
+          padding:15px 18px; border-radius:50%;
+          font-size:22px; text-decoration:none;
+          box-shadow:0 0 20px rgba(0,0,0,0.6);">
+  💬
+</a>
 
 </body>
 </html>
