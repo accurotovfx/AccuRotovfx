@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>AccuRoto VFX | Cinematic Rotoscoping Studio</title>
-<meta name="description" content="AccuRoto VFX – Cinematic-quality Rotoscoping services for Films and OTT platforms." />
+<meta name="description" content="AccuRoto VFX – Professional Rotoscoping services for Films and OTT platforms." />
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
@@ -26,7 +26,7 @@ header {
   justify-content: center;
   text-align: center;
   background:
-    linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9)),
+    linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.9)),
     url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4") center/cover no-repeat;
 }
 
@@ -35,32 +35,43 @@ header {
   padding: 20px;
 }
 
-.logo {
-  font-size: 3.8rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: #00ffd5;
-  animation: glow 2.5s infinite alternate;
+/* LOGO IMAGE */
+.logo-img {
+  width: 180px;
+  margin-bottom: 25px;
+  animation: logoGlow 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(0,255,213,0.6));
 }
 
-.logo span {
-  color: #ffffff;
+/* LOGO GLOW ANIMATION */
+@keyframes logoGlow {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(0,255,213,0.5));
+  }
+  50% {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 30px rgba(0,255,213,1));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(0,255,213,0.5));
+  }
 }
 
-@keyframes glow {
-  from { text-shadow: 0 0 15px rgba(0,255,213,0.4); }
-  to { text-shadow: 0 0 35px rgba(0,255,213,1); }
+.hero-box h1 {
+  font-size: 3.2rem;
+  letter-spacing: 2px;
 }
 
 .hero-box h2 {
   font-weight: 300;
-  margin-top: 20px;
+  margin-top: 15px;
   color: #dddddd;
-  font-size: 1.4rem;
 }
 
 .hero-box p {
-  margin-top: 25px;
+  margin-top: 20px;
   font-size: 1.1rem;
   color: #bbbbbb;
 }
@@ -76,7 +87,6 @@ h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 50px;
-  letter-spacing: 1px;
 }
 
 /* ABOUT */
@@ -95,7 +105,7 @@ h2 {
   gap: 25px;
 }
 
-/* CARDS */
+/* CARD */
 .card {
   background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
   padding: 30px;
@@ -155,7 +165,8 @@ footer {
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .logo { font-size: 2.6rem; }
+  .hero-box h1 { font-size: 2.4rem; }
+  .logo-img { width: 140px; }
   iframe { width: 100%; height: 240px; }
 }
 </style>
@@ -166,11 +177,10 @@ footer {
 <!-- HERO -->
 <header>
   <div class="hero-box">
-    <div class="logo">Accu<span>Roto</span> VFX</div>
+    <img src="logo.png" alt="AccuRoto VFX Logo" class="logo-img">
+    <h1>AccuRoto VFX</h1>
     <h2>Cinematic Precision in Rotoscoping</h2>
-    <p>
-      A dedicated roto studio delivering accuracy, consistency, and reliability.
-    </p>
+    <p>Dedicated roto solutions for Films and OTT platforms</p>
   </div>
 </header>
 
@@ -180,29 +190,25 @@ footer {
   <div class="about">
     <p>
       AccuRoto VFX is a Bangalore, India–based VFX studio founded in 2025, focused on
-      delivering high-quality, cinematic rotoscoping services for feature films,
-      OTT platforms, and commercials.
+      delivering high-quality, cinematic rotoscoping services.
     </p>
 
     <p>
-      At present, our primary service is rotoscoping, supported by a skilled team
-      with the capacity to handle both small and bulk shot volumes efficiently.
-      As projects grow, we are actively preparing to expand into additional
-      departments including matchmove, paint, clean-up, wire removal, and chroma work,
-      while also creating opportunities to onboard new talent.
+      Currently, we specialize exclusively in rotoscoping, supported by a skilled
+      team capable of handling both small and bulk shot volumes efficiently.
+      As we grow, we plan to expand into matchmove, paint, clean-up, wire removal,
+      and chroma work while welcoming new talent into our pipeline.
     </p>
 
     <p>
-      Our philosophy is simple — deliver clean, production-ready roto work while
-      continuously learning new techniques and improving workflows to meet
-      demanding deadlines. We have contributed to numerous national and international
-      projects as a trusted vendor partner to both small and large VFX studios
-      across the globe.
+      We strongly believe in delivering clean, production-ready roto while constantly
+      learning new techniques to meet tight deadlines. We have contributed to numerous
+      national and international projects as a trusted vendor partner to studios
+      worldwide.
     </p>
 
     <p>
-      We are currently open to new projects and collaborations, welcoming both
-      short-term and long-term roto requirements.
+      We are currently open to new projects and collaborations.
     </p>
   </div>
 </section>
@@ -213,19 +219,19 @@ footer {
   <div class="grid">
     <div class="card">
       <h3>Rotoscoping (Active)</h3>
-      <p>Frame-accurate, cinematic roto for films, OTT, and VFX pipelines.</p>
+      <p>Frame-accurate, cinematic roto work.</p>
     </div>
     <div class="card">
       <h3>Paint & Prep</h3>
-      <p>Upcoming services including clean-up and wire removal.</p>
+      <p>Planned expansion for clean-up and wire removal.</p>
     </div>
     <div class="card">
       <h3>Keying</h3>
-      <p>Green and blue screen keying as our pipeline expands.</p>
+      <p>Green & blue screen workflows (future).</p>
     </div>
     <div class="card">
       <h3>Tracking</h3>
-      <p>Object, planar, and camera tracking in future phases.</p>
+      <p>Matchmove and camera tracking (future).</p>
     </div>
   </div>
 </section>
@@ -263,10 +269,10 @@ footer {
 <section>
   <h2>Contact</h2>
   <div class="contact">
-    <p>Open for new roto projects — small or bulk.</p>
+    <p>Open for new roto projects — small or bulk</p>
     <p><strong>📞 Mobile:</strong> +91 78459 28170</p>
 
-    <a href="mailto:accurotovfx@gmail.com">Email Us</a>
+    <a href="mailto:accurotovfx@gmail.com">Email</a>
     <a href="https://wa.me/917845928170" target="_blank">WhatsApp</a>
     <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
   </div>
